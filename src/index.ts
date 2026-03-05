@@ -448,7 +448,7 @@ function startHttpServer(): void {
 // MCP Server
 // ---------------------------------------------------------------------------
 
-const mcpServer = new McpServer({ name: 'gimmick-search', version: '1.0.0' });
+const mcpServer = new McpServer({ name: 'gimmick-search-mcp', version: '1.0.0' });
 
 // --- gimmick_open -----------------------------------------------------------
 

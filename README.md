@@ -57,7 +57,7 @@ Add to your `.mcp.json`:
       "command": "/bin/sh",
       "args": [
         "-c",
-        "docker rm -f gimmick-search 2>/dev/null; mkdir -p \"$(pwd)/output/.checkpoints\" \"$(pwd)/output/images\"; docker run --rm -i --name gimmick-search -p 6080:6080 -p 6081:6081 --shm-size=256m -v \"$(pwd)/output/.checkpoints:/checkpoints\" -v \"$(pwd)/output:/output\" gimmick-search-mcp:latest"
+        "docker rm -f gimmick-search-mcp 2>/dev/null; mkdir -p \"$(pwd)/output/.checkpoints\" \"$(pwd)/output/images\"; docker run --rm -i --name gimmick-search-mcp -p 6080:6080 -p 6081:6081 --shm-size=256m -v \"$(pwd)/output/.checkpoints:/checkpoints\" -v \"$(pwd)/output:/output\" gimmick-search-mcp:latest"
       ]
     }
   }
@@ -112,7 +112,7 @@ The file appears at `./output/images/result_01.png` on the host.
 
 ## Vision preview integration
 
-If you run [gimmick-vision](https://github.com/castellotti/gimmick-vision) alongside gimmick-search, it can push image analysis results to the control panel at `http://localhost:6081/api/vision` for a real-time vision preview in the sidebar.
+If you run [gimmick-vision-mcp](https://github.com/castellotti/gimmick-vision-mcp) alongside gimmick-search-mcp, it can push image analysis results to the control panel at `http://localhost:6081/api/vision` for a real-time vision preview in the sidebar.
 
 ## Environment variables
 
