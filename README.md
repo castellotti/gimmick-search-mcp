@@ -61,7 +61,7 @@ Add to your `.mcp.json`:
       "command": "/bin/sh",
       "args": [
         "-c",
-        "docker rm -f gimmick-search-mcp 2>/dev/null; mkdir -p \"$(pwd)/output/.checkpoints\" \"$(pwd)/output/images\"; docker run --rm -i --name gimmick-search-mcp -p 6080:6080 -p 6081:6081 --shm-size=256m -v \"$(pwd)/output/.checkpoints:/checkpoints\" -v \"$(pwd)/output:/output\" gimmick-search-mcp:latest"
+        "docker rm -f gimmick-search-mcp 2>/dev/null; mkdir -p \"$(pwd)/output/.checkpoints\" \"$(pwd)/output/images\"; docker run --rm -i --name gimmick-search-mcp -p 6080:6080 -p 6081:6081 --shm-size=256m -v \"$(pwd)/output/.checkpoints:/checkpoints\" -v \"$(pwd)/output:/output\" ghcr.io/castellotti/gimmick-search-mcp:latest"
       ]
     }
   }
@@ -72,12 +72,20 @@ Add to your `.mcp.json`:
 
 The `-v` mounts make checkpoints and screenshots available on the host filesystem.
 
-## Building the Docker image
+## Docker image
+
+The image is published to the GitHub Container Registry on every push to `main` and on version tags:
+
+```bash
+docker pull ghcr.io/castellotti/gimmick-search-mcp:latest
+```
+
+## Building from source
 
 ```bash
 git clone https://github.com/castellotti/gimmick-search-mcp.git
 cd gimmick-search-mcp
-docker build -t gimmick-search-mcp:latest .
+docker build -t ghcr.io/castellotti/gimmick-search-mcp:latest .
 ```
 
 ## Building locally (TypeScript, no Docker)
