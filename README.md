@@ -15,6 +15,10 @@ Most web research tasks fail with headless browsers or plain HTTP fetchers becau
 
 gimmick-search solves all three while keeping Claude in the loop with real-time visual feedback.
 
+![gimmick-search-mcp demo](images/demo-search.png)
+
+![gimmick-search-mcp + gimmick-vision-mcp](images/shared.png)
+
 ## Optional: Combine with gimmick-vision
 
 Claude Code and other agents (especially when running against a local LLM like Qwen3-Coder-Next) has no built-in vision capability. gimmick-vision adds three image analysis tools to the MCP toolset, routing vision requests to a separate local model — for example Qwen2.5-VL-7B — without any cloud API calls.
