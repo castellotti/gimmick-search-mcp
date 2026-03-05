@@ -1,0 +1,33 @@
+{
+  "name": "gimmick-search-mcp",
+  "version": "1.0.0",
+  "description": "MCP server providing a visible Chromium browser via Playwright with noVNC remote viewing and a pause/resume/stop control panel",
+  "type": "module",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "playwright",
+    "browser",
+    "novnc",
+    "web-research",
+    "claude",
+    "claude-code"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sc/gimmick-search-mcp"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.2",
+    "playwright-core": "^1.50.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.10",
+    "typescript": "^5.3.3"
+  }
+}
