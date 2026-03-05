@@ -7,7 +7,7 @@ COPY src/ ./src/
 RUN npm ci --ignore-scripts && npm run build
 
 # Runtime stage — Playwright base image with Chromium pre-installed
-FROM mcr.microsoft.com/playwright:v1.50.0-noble
+FROM mcr.microsoft.com/playwright:v1.58.2-noble
 WORKDIR /app
 
 # Install virtual display, window manager, and VNC/noVNC stack
