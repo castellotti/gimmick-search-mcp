@@ -71,7 +71,7 @@ The `-v` mounts make checkpoints and screenshots available on the host filesyste
 ## Building the Docker image
 
 ```bash
-git clone https://github.com/sc/gimmick-search-mcp
+git clone https://github.com/castellotti/gimmick-search-mcp.git
 cd gimmick-search-mcp
 docker build -t gimmick-search-mcp:latest .
 ```
